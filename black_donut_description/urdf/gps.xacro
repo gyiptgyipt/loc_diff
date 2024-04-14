@@ -1,4 +1,3 @@
-<!-- GPS Sensor -->
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
@@ -38,5 +37,23 @@
     </plugin>
   </sensor>
 </gazebo> -->
+
+<gazebo reference="gps_link">
+
+<sensor name="my_gps" type="gps">
+  <!-- ensure the sensor is active (required) -->
+  <always_on>true</always_on>
+  <update_rate>30</update_rate>
+  <plugin name="my_gps_plugin" filename="libgazebo_ros_gps_sensor.so">
+    <ros>
+      <!-- publish to /gps/data -->
+      <namespace>/gps</namespace>
+      <remapping>~/out:=data</remapping>
+      <remapping>~/vel:=velocity</remapping>
+    </ros>
+  </plugin>
+</sensor>
+
+</gazebo>
 
 </robot>
