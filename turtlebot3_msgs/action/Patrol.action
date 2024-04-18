@@ -1,8 +1,0 @@
-# Goal
-float32 radius
----
-# Result
-bool success
----
-# Feedback
-float32 left_time
