@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<sdf version="1.5">
+  <world name="default">
+  
+    <scene>
+      <grid>false</grid>
+    </scene>
+  
+    <!-- A global light source -->
+    <include>
+      <uri>model://sun</uri>
+      <pose>1.5 -30 100 0 0 0</pose>
+    </include>
+    
+    <!-- Stop signs -->
+    <include>
+      <name>stop_sign_0</name>
+      <static>true</static>
+      <uri>model://stop_sign</uri>
+      <pose>3.5 -3.5 0 0 0 0</pose>
+    </include>
+    
+    <include>
+      <name>stop_sign_1</name>
+      <static>true</static>
+      <uri>model://stop_sign</uri>
+      <pose>-3 3 0 0 0 3.15</pose>
+    </include>
+    
+    <!-- Houses -->
+    <include>
+      <name>house_1</name>
+      <uri>model://house_1</uri>
+      <pose>-12 12 0 0 0 0</pose>
+    </include>
+    
+    <include>
+      <name>house_2</name>
+      <uri>model://house_2</uri>
+      <pose>-32 9 0 0 0 0</pose>
+    </include>
+    
+    <include>
+      <name>house_3</name>
+      <uri>model://house_3</uri>
+      <pose>-5.5 -7 0 0 0 1.55</pose>
+    </include>
+    
+    
+    <!-- A gas station -->
+    <include>
+      <uri>model://gas_station</uri>
+      <pose>10 14 0 0 0 1.55</pose>
+    </include>
+    
+    <!-- A fast food restaurant -->
+    <include>
+      <uri>model://fast_food</uri>
+      <pose>19.869 -13.2122 0 0 0 3.14159</pose>
+    </include>
+    
+    
+    <!-- Lamps -->
+    <include>
+      <name>lamp_post_0</name>
+      <uri>model://lamp_post</uri>
+      <pose>-3 13 0 0 0 1.55</pose>
+    </include>
+    <include>
+      <name>lamp_post_1</name>
+      <uri>model://lamp_post</uri>
+      <pose>3 23 0 0 0 -1.55</pose>
+    </include>
+    <include>
+      <name>lamp_post_2</name>
+      <uri>model://lamp_post</uri>
+      <pose>-3 33 0 0 0 1.55</pose>
+    </include>
+    
+    <include>
+      <name>lamp_post_3</name>
+      <uri>model://lamp_post</uri>
+      <pose>-3 -3 0 0 0 1.55</pose>
+    </include>
+    <include>
+      <name>lamp_post_4</name>
+      <uri>model://lamp_post</uri>
+      <pose>3 -13 0 0 0 -1.55</pose>
+    </include>
+    <include>
+      <name>lamp_post_5</name>
+      <uri>model://lamp_post</uri>
+      <pose>-3 -23 0 0 0 1.55</pose>
+    </include>
+    <include>
+      <name>lamp_post_6</name>
+      <uri>model://lamp_post</uri>
+      <pose>3 -33 0 0 0 -1.55</pose>
+    </include>
+    
+    <include>
+      <name>lamp_post_7</name>
+      <uri>model://lamp_post</uri>
+      <pose>3 3 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>lamp_post_8</name>
+      <uri>model://lamp_post</uri>
+      <pose>13 -3 0 0 0 3.15</pose>
+    </include>
+    <include>
+      <name>lamp_post_9</name>
+      <uri>model://lamp_post</uri>
+      <pose>23 3 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>lamp_post_10</name>
+      <uri>model://lamp_post</uri>
+      <pose>33 -3 0 0 0 3.15</pose>
+    </include>
+
+    <include>
+      <name>lamp_post_11</name>
+      <uri>model://lamp_post</uri>
+      <pose>-13 3 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>lamp_post_12</name>
+      <uri>model://lamp_post</uri>
+      <pose>-23 -3 0 0 0 3.15</pose>
+    </include>
+    <include>
+      <name>lamp_post_13</name>
+      <uri>model://lamp_post</uri>
+      <pose>-33 3 0 0 0 0</pose>
+    </include>
+    
+
+    <!-- Toyota Prius -->
+    <include>
+      <uri>model://prius_hybrid</uri>
+      <pose>1.5 -30 0 0 0 3.14</pose> 
+    </include>
+
+    <!-- SUV -->
+    <include>
+      <uri>model://suv</uri>
+      <pose>23.453 13.121800 0 0 0 1.57</pose> 
+    </include>      
+    
+    <!-- Roads -->
+    <include>
+      <uri>model://stopW</uri>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+    
+    <!-- GUI -->
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>
+        34.902946
+        -61.301678
+        25.866743
+        0.0
+        0.499643
+        2.016195
+        </pose>
+      </camera>
+    </gui>
+    
+  </world>
+</sdf>
