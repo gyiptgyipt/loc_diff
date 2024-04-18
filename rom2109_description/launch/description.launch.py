@@ -11,7 +11,6 @@ def generate_launch_description():
     # gazebo_pkg = get_package_share_directory('rom2109_gazebo')
     # gz_ros_pkg = get_package_share_directory('gazebo_ros')
     use_sim_time = LaunchConfiguration('use_sim_time')
-    
     urdf_pkg = get_package_share_directory('rom2109_description')
     urdf_path= os.path.join(urdf_pkg, 'urdf/raw', "rom2109_tall.urdf")
     urdf = open(urdf_path).read()
