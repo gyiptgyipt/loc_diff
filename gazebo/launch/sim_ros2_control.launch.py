@@ -11,9 +11,9 @@ import xacro
 
 
 def generate_launch_description():
-    gazebo_pkg = get_package_share_directory('rtab_gazebo')
+    gazebo_pkg = get_package_share_directory('rldb_gazebo')
 
-    description_pkg = get_package_share_directory('rtab_description')
+    description_pkg = get_package_share_directory('rldb_description')
     default_world_path = os.path.join(
         get_package_share_directory('turtlebot3_gazebo'),
         'worlds',
@@ -21,7 +21,7 @@ def generate_launch_description():
     )
 
     # default_world_path = os.path.join(
-    #     get_package_share_directory('rtab_gazebo'),
+    #     get_package_share_directory('rldb_gazebo'),
     #     'worlds',
     #     'custom.world'
     # )
@@ -43,7 +43,7 @@ def generate_launch_description():
     rviz_node = Node(
         package='rviz2',
         executable='rviz2',
-        arguments=['-d', os.path.join(gazebo_pkg, 'rviz2', 'rtabmap_test.rviz')],
+        arguments=['-d', os.path.join(gazebo_pkg, 'rviz2', 'rldbmap_test.rviz')],
         condition=IfCondition(LaunchConfiguration('open_rviz'))
     )
 
@@ -69,7 +69,7 @@ def generate_launch_description():
         package='gazebo_ros',
         executable='spawn_entity.py',
         arguments=['-entity', 'black_donut', '-topic', '/robot_description',
-        #arguments=["-database", "rtab_tall", '-entity', 'rtab',
+        #arguments=["-database", "rldb_tall", '-entity', 'rldb',
         "-x", '-1.0',
         "-y", '-1.0',
         "-z", '0.0'],
