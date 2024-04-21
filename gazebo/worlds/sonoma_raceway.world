@@ -65,6 +65,17 @@
         <kinematic>0</kinematic>
       </link>
     </model>
+  <spherical_coordinates> 
+  <!-- currently gazebo has a bug: instead of outputting lat, long, altitude in ENU
+  (x = East, y = North and z = Up) as the default configurations, it's outputting (-E)(-N)U,
+  therefore we rotate the default frame 180 so that it would go back to ENU
+  see: https://github.com/osrf/gazebo/issues/2022 -->
+  <surface_model>EARTH_WGS84</surface_model>
+  <latitude_deg>38.161479</latitude_deg>
+  <longitude_deg>-122.454630</longitude_deg>
+  <elevation>488.0</elevation>
+  <heading_deg>180</heading_deg>
+  </spherical_coordinates>
     <gravity>0 0 -9.8</gravity>
     <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
     <atmosphere type='adiabatic'/>
@@ -90,7 +101,7 @@
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
     <model name='sonoma_raceway'>
-      <pose>-273.912 131.466 -4.8 0 -0 0</pose>
+      <pose>-5.94124 3.17138 -4.8 0 -0 0</pose>
       <static>1</static>
       <link name='link'>
         <collision name='collision'>
@@ -128,10 +139,10 @@
       </link>
     </model>
     <state world_name='default'>
-      <sim_time>105 883000000</sim_time>
-      <real_time>106 497669871</real_time>
-      <wall_time>1713681217 326822244</wall_time>
-      <iterations>105883</iterations>
+      <sim_time>209 118000000</sim_time>
+      <real_time>211 336777726</real_time>
+      <wall_time>1713681744 430557130</wall_time>
+      <iterations>209118</iterations>
       <model name='ground_plane'>
         <pose>0 0 0 0 -0 0</pose>
         <scale>1 1 1</scale>
@@ -143,10 +154,10 @@
         </link>
       </model>
       <model name='sonoma_raceway'>
-        <pose>-273.912 131.466 -4.8 0 -0 0</pose>
+        <pose>-278.476 134.472 -4.8 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>-273.912 131.466 -4.8 0 -0 0</pose>
+          <pose>-278.476 134.472 -4.8 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -158,7 +169,7 @@
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose>150.229 -79.9431 39.6273 0 0.223643 2.6442</pose>
+        <pose>54.8815 -99.3891 53.5896 0 0.453799 2.17935</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>

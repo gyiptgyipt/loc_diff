@@ -13,7 +13,8 @@ import xacro
 def generate_launch_description():
     gazebo_pkg = get_package_share_directory('rlbd_gazebo')
     description_pkg = get_package_share_directory('rlbd_description')
-    default_world_path = os.path.join(gazebo_pkg, 'worlds', 'turtlebot3_house.world')
+    # default_world_path = os.path.join(gazebo_pkg, 'worlds', 'turtlebot3_house.world')
+    default_world_path = os.path.join(gazebo_pkg, 'worlds', 'sonoma_raceway.world')
     
     bot = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
@@ -61,7 +62,7 @@ def generate_launch_description():
         #arguments=["-database", "black_donut_tall", '-entity', 'black_donut',
         "-x", '0.0',
         "-y", '0.0',
-        "-z", '0.3'],
+        "-z", '5.0'],
         output='screen'
     )
 
