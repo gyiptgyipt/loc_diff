@@ -11,8 +11,8 @@ import xacro
 
 
 def generate_launch_description():
-    gazebo_pkg = get_package_share_directory('rldb_gazebo')
-    description_pkg = get_package_share_directory('rldb_description')
+    gazebo_pkg = get_package_share_directory('rlbd_gazebo')
+    description_pkg = get_package_share_directory('rlbd_description')
     default_world_path = os.path.join(gazebo_pkg, 'worlds', 'turtlebot3_house.world')
     
     bot = IncludeLaunchDescription(
