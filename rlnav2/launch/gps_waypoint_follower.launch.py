@@ -40,7 +40,7 @@ def generate_launch_description():
     use_mapviz = LaunchConfiguration('use_mapviz')
 
     declare_use_rviz_cmd = DeclareLaunchArgument(
-        'use_rviz',
+        'rviz',
         default_value='False',
         description='Whether to start RVIZ')
 
@@ -86,7 +86,7 @@ def generate_launch_description():
     ld = LaunchDescription()
 
     # simulator launch
-    ld.add_action(gazebo_cmd)
+    # ld.add_action(gazebo_cmd)
 
     # robot localization launch
     ld.add_action(robot_localization_cmd)
@@ -98,6 +98,6 @@ def generate_launch_description():
     ld.add_action(declare_use_rviz_cmd)
     ld.add_action(rviz_cmd)
     ld.add_action(declare_use_mapviz_cmd)
-    ld.add_action(mapviz_cmd)
+    # ld.add_action(mapviz_cmd)
 
     return ld
