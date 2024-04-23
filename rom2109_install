@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# Adding ROM2109 ROBOTS to .gazebo/model
+if [[ -e ~/.gazebo/models ]]
+then
+	echo "models Directory exists."
+	rm -rf ~/.gazebo/models/rom2109*
+else
+	mkdir -p ~/.gazebo/models
+fi
+cp -r ./models/* ~/.gazebo/models
+echo "models Copy finished!"
+
+# Modifying urdf.urdf
+echo "Modifying file paths in urdf.urdf "
+read -p "Enter ROS2 WORKSPACE FOLDER eg.(/home/your_name/your_path/ros2_workspace) :" ros2_ws_path
+name=$HOME
+sed -i "s|/home/rom/ros2/ros2_ws|$ros2_ws_path|" ./rom2109_description/urdf/urdf.urdf
+sed -i "s|/home/rom|$name|" ./rom2109_description/urdf/urdf.urdf
+
+# Remove cafe.world
+rm ./rom2109_gazebo/worlds/cafe.world
+echo "Deleting rom2109_gazebo/worlds/cafe.world"
+echo "OK"
+
+echo "export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp" >> ~/.bashrc
+echo "Exporting rmw_cyclonedds_cpp : OK "
+
+git clone git@github.com:ROM-robotics/tmux_install.git
+#cd tumx_install
+#./start.sh
+echo "Cloning ROM-robotics/tmux_install.git"
+
+cp ./.tmuxinator.yml ./autostart.sh $HOME/
+echo "Copying .tmuxinator.yaml, autostart.sh to $HOME "

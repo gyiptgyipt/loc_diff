@@ -1,0 +1,172 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="default">
+    <physics name="ode_70iters" type="ode">
+      <max_step_size>0.001</max_step_size>
+      <!-- <real_time_update_rate>10000</real_time_update_rate> -->
+      <real_time_update_rate>1000</real_time_update_rate>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>70</iters>
+        </solver>
+      </ode>
+    </physics>
+    
+    <include>
+      <uri>model://house_1</uri>
+      <name>house_0</name>
+      <pose>-7 10 0 0 0 1.5708</pose>
+    </include>
+
+    <include>
+      <uri>model://suv</uri>
+      <name>suv_0</name>
+      <pose>5.7 13.1 0 0 0 0</pose>
+    </include>
+	  
+    <include>
+      <uri>model://garden</uri>
+      <name>garden_0</name>
+      <pose>0 0.5 0 0 0 1.5708</pose>
+    </include>
+
+    <include>
+      <uri>model://garden</uri>
+      <name>garden_1</name>
+      <pose>10 0 0 0 0 1.5708</pose>
+    </include>
+    <include>
+      <uri>model://garden</uri>
+      <name>garden_2</name>
+      <pose>10 0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://garden</uri>
+      <name>garden_3</name>
+      <pose>4 4 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://garden</uri>
+      <name>garden_4</name>
+      <pose>9 4 0 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://garden</uri>
+      <name>garden_5</name>
+      <pose>10 4 0 0 0 1.5708</pose>
+    </include>
+
+    <include>
+      <uri>model://garden</uri>
+      <name>garden_6</name>
+      <pose>3.75 23 0 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://garden</uri>
+      <name>garden_7</name>
+      <pose>-10 -3.5 0 0 0 0</pose>
+    </include>   
+
+    <include>
+      <uri>model://garden</uri>
+      <name>garden_8</name>
+      <pose>-6 -3.5 0 0 0 0</pose>
+    </include>     
+    <include>
+      <uri>model://garden</uri>
+      <name>garden_9</name>
+      <pose>-20 0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://garden</uri>
+      <name>garden_10</name>
+      <pose>-20 6 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://garden</uri>
+      <name>garden_11</name>
+      <pose>-20 12 0 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://garden</uri>
+      <name>garden_12</name>
+      <pose>-20 17.75 0 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://garden</uri>
+      <name>garden_13</name>
+      <pose>-20 23 0 0 0 0</pose>
+    </include>
+    
+    <include>
+      <uri>model://garden</uri>
+      <name>garden_14</name>
+      <pose>-14 23 0 0 0 0</pose>
+    </include>   
+
+    <include>
+      <uri>model://garden</uri>
+      <name>garden_15</name>
+      <pose>-8 23 0 0 0 0</pose>
+    </include> 
+ 
+     <include>
+      <uri>model://garden</uri>
+      <name>garden_16</name>
+      <pose>-2.25 23 0 0 0 0</pose>
+    </include> 
+ 
+     <include>
+      <uri>model://garden</uri>
+      <name>garden_17</name>
+      <pose>-20 -3.5 0 0 0 0</pose>
+    </include> 
+ 
+     <include>
+      <uri>model://garden</uri>
+      <name>garden_18</name>
+      <pose>4 -3.5 0 0 0 0</pose>
+    </include> 
+ 
+     <include>
+      <uri>model://garden</uri>
+      <name>garden_19</name>
+      <pose>10 -3.5 0 0 0 0</pose>
+    </include> 
+ 
+     <include>
+      <uri>model://garden</uri>
+      <name>garden_20</name>
+      <pose>9.66 23 0 0 0 0</pose>
+    </include> 
+ 
+     <include>
+      <uri>model://garden</uri>
+      <name>garden_21</name>
+      <pose>10.25 23 0 0 0 3.14159</pose>
+    </include> 
+ 
+    
+    <!-- Global light source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Focus camera on tall pendulum -->
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>30.0 -3.10 40.64 0.0 0.818 2.720193</pose>
+        <view_controller>orbit</view_controller>
+      </camera>
+    </gui>    
+  </world>
+</sdf>
