@@ -40,13 +40,13 @@ def generate_launch_description():
     use_mapviz = LaunchConfiguration('use_mapviz')
 
     declare_use_rviz_cmd = DeclareLaunchArgument(
-        'rviz',
-        default_value='False',
+        'use_rviz',
+        default_value='True',
         description='Whether to start RVIZ')
 
     declare_use_mapviz_cmd = DeclareLaunchArgument(
         'use_mapviz',
-        default_value='False',
+        default_value='True',
         description='Whether to start mapviz')
 
     gazebo_cmd = IncludeLaunchDescription(
@@ -76,11 +76,11 @@ def generate_launch_description():
         condition=IfCondition(use_rviz)
     )
 
-    mapviz_cmd = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(
-            os.path.join(launch_dir, 'mapviz.launch.py')),
-        condition=IfCondition(use_mapviz)
-    )
+    # mapviz_cmd = IncludeLaunchDescription(
+    #     PythonLaunchDescriptionSource(
+    #         os.path.join(launch_dir, 'mapviz.launch.py')),
+    #     condition=IfCondition(use_mapviz)
+    # )
 
     # Create the launch description and populate
     ld = LaunchDescription()
@@ -98,6 +98,6 @@ def generate_launch_description():
     ld.add_action(declare_use_rviz_cmd)
     ld.add_action(rviz_cmd)
     ld.add_action(declare_use_mapviz_cmd)
-    # ld.add_action(mapviz_cmd)
+    #ld.add_action(mapviz_cmd)
 
     return ld

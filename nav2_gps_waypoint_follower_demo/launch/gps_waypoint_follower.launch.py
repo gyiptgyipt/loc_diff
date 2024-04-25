@@ -86,10 +86,10 @@ def generate_launch_description():
     ld = LaunchDescription()
 
     # simulator launch
-    ld.add_action(gazebo_cmd)
+    #ld.add_action(gazebo_cmd)
 
     # robot localization launch
-    ld.add_action(robot_localization_cmd)
+    #ld.add_action(robot_localization_cmd)
 
     # navigation2 launch
     ld.add_action(navigation2_cmd)
