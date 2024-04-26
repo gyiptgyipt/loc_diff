@@ -26,7 +26,8 @@ from nav2_common.launch import RewrittenYaml
 
 def generate_launch_description():
     # Get the launch directory
-    bringup_dir = get_package_share_directory('nav2_bringup')
+    rviz_dir = get_package_share_directory('nav2_bringup')
+    bringup_dir = get_package_share_directory('rlnav2')
     gps_wpf_dir = get_package_share_directory(
         "rlnav2")
     launch_dir = os.path.join(gps_wpf_dir, 'launch')
@@ -61,7 +62,7 @@ def generate_launch_description():
 
     navigation2_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
-            os.path.join(bringup_dir, "launch", "navigation_launch.py")
+            os.path.join(bringup_dir, "launch", "rlbd_navigation_launch.py")
         ),
         launch_arguments={
             "use_sim_time": "True",
@@ -72,7 +73,7 @@ def generate_launch_description():
 
     rviz_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
-            os.path.join(bringup_dir, "launch", 'rviz_launch.py')),
+            os.path.join(rviz_dir, "launch", 'rviz_launch.py')),
         condition=IfCondition(use_rviz)
     )
 
