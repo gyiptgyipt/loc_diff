@@ -25,11 +25,11 @@ def generate_launch_description():
         parameters=[params],
     )
 
-    # joint_state_node = Node(
-    #     name="joint_state_publisher",
-    #     package="joint_state_publisher",
-    #     executable="joint_state_publisher",
-    # )
+    joint_state_node = Node(
+        name="joint_state_publisher",
+        package="joint_state_publisher",
+        executable="joint_state_publisher",
+    )
 
 
     return LaunchDescription([
@@ -39,7 +39,7 @@ def generate_launch_description():
             description='Use sim time if true'),
 
         robot_state_publisher_node,
-        #joint_state_node,
+        # joint_state_node,
 
 
     ])
