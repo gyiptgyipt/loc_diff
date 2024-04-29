@@ -50,10 +50,10 @@ def generate_launch_description():
         default_value='True',
         description='Whether to start mapviz')
 
-    gazebo_cmd = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(
-            os.path.join(launch_dir, 'gazebo_gps_world.launch.py'))
-    )
+    # gazebo_cmd = IncludeLaunchDescription(
+    #     PythonLaunchDescriptionSource(
+    #         os.path.join(launch_dir, 'gazebo_gps_world.launch.py'))
+    # )
 
     robot_localization_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
