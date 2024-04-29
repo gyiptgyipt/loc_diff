@@ -25,6 +25,7 @@ def generate_launch_description():
         "rlnav2")
     rl_params_file = os.path.join(
         gps_wpf_dir, "config", "dual_ekf_navsat_params.yaml")
+        
 
     return LaunchDescription(
         [
