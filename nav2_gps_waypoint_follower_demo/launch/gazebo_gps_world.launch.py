@@ -26,7 +26,7 @@ def generate_launch_description():
     gps_wpf_dir = get_package_share_directory(
         "nav2_gps_waypoint_follower_demo")
     launch_dir = os.path.join(gps_wpf_dir, 'launch')
-    world = os.path.join(gps_wpf_dir, "worlds", "blank.world")
+    world = os.path.join(gps_wpf_dir, "worlds", "sonoma_raceway.world")
 
     urdf = os.path.join(gps_wpf_dir, 'urdf', 'turtlebot3_waffle_gps.urdf')
     with open(urdf, 'r') as infp:
