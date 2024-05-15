@@ -28,6 +28,15 @@ source install/setup.bash
 ros2 launch rlbd_gazebo black_donut_sim_ros2_control.launch.py
 ```
 
+```
+ros2 launch rlbd_gazebo mapviz.launch
+```
+
+```
+ros2 launch rlnav2 gps_waypoint_follower.launch.py
+```
+
+[YOUTUBE_VIDEO](https://www.youtube.com/watch?v=lSZ8QRvmXd8&t=50s)
 
 ..........<to_continue>........
 
