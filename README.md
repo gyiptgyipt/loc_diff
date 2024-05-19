@@ -8,7 +8,10 @@ This custom robot integrated with gps,imu,depth_camera plugins.(You can find the
 -Add [the Sonoma_Raceway model zip file](https://github.com/Htet-Wai-Yan-HWY/loc_diff/blob/main/Sonoma%20Raceway.zip) to your ~/.gazebo/model/ and extrect it to load in the gazeo world.
 
 -Run gazebo default(empty_world) and find Sonoma_Raceway in insert tab in the top-left corner of gazebo.
--And Save that world in (your_workspace)/gazebo/world/ .
+-And Save that world in (your_workspace)/gazebo/world/      and name that world as 'sonoma_raceway.world'
+
+
+
 
 ### Build the package in your workspace.
 
@@ -37,6 +40,10 @@ ros2 launch rlnav2 gps_waypoint_follower.launch.py
 ```
 
 [YOUTUBE_VIDEO](https://www.youtube.com/watch?v=lSZ8QRvmXd8&t=50s)
+
+
+
+### Free to ask me anytime if something was wrong, I love to help you guys <3
 
 ..........<to_continue>........
 
