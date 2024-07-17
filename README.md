@@ -12,6 +12,10 @@ This custom robot integrated with gps,imu,depth_camera plugins.(You can find the
 
 
 
+### For tile map for the mapviz (follow that instruction of below repo) 
+
+-[tile_map_docker](https://github.com/danielsnider/MapViz-Tile-Map-Google-Maps-Satellite)
+
 
 ### Build the package in your workspace.
 
