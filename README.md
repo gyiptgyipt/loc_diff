@@ -36,7 +36,7 @@ ros2 launch rlbd_gazebo black_donut_sim_ros2_control.launch.py
 ```
 
 ```
-ros2 launch rlbd_gazebo mapviz.launch
+ros2 launch rlbd_gazebo mapviz.launch.py
 ```
 
 ```
@@ -50,4 +50,8 @@ ros2 launch rlnav2 gps_waypoint_follower.launch.py
 ### Free to ask me anytime if something was wrong, I love to help you guys <3
 
 ..........<to_continue>........
+
+TODO : 
+-need to tune robot localization 
+-to add gps waypoint logger and follower
 
