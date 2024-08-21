@@ -17,7 +17,7 @@ This custom robot integrated with gps,imu,depth_camera plugins.(You can find the
 -[tile_map_docker](https://github.com/danielsnider/MapViz-Tile-Map-Google-Maps-Satellite)
 
 
-### Install packages that you might need.
+### Install packages those you might need.
 
 ```
 sudo apt install -y ros-humble-gazebo-ros* 
@@ -66,6 +66,6 @@ ros2 launch rlnav2 gps_waypoint_follower.launch.py
 ..........<to_continue>........
 
 TODO : 
--need to tune robot localization 
+-need to tune robot localization (currently disabled)
 -to add gps waypoint logger and follower
 
