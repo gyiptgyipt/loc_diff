@@ -17,6 +17,20 @@ This custom robot integrated with gps,imu,depth_camera plugins.(You can find the
 -[tile_map_docker](https://github.com/danielsnider/MapViz-Tile-Map-Google-Maps-Satellite)
 
 
+### Install packages that you might need.
+
+```
+sudo apt install -y ros-humble-gazebo-ros* 
+sudo apt install -y ros-humble-ros2-control*
+sudo apt install -y ros-humble-controller-*
+sudo apt install ros-humble-navigation2
+sudo apt install ros-humble-nav2-bringup
+sudo apt install ros-humble-twist-mux ros-humble-nav2*     
+sudo apt install ros-humble-robot-localization
+sudo apt install -y ros-humble-slam-toolbox
+```
+
+
 ### Build the package in your workspace.
 
 -go to your workspace

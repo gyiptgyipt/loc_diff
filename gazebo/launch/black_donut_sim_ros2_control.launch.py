@@ -59,7 +59,7 @@ def generate_launch_description():
         package='gazebo_ros',
         executable='spawn_entity.py',
         arguments=['-entity', 'black_donut', '-topic', '/robot_description',
-        #arguments=["-database", "black_donut_tall", '-entity', 'black_donut',
+        #arguments=["-database", "black_donut", '-entity', 'black_donut',
         "-x", '0.0',
         "-y", '0.0',
         "-z", '5.0'],
