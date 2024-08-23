@@ -16,10 +16,7 @@ This custom robot integrated with gps,imu,depth_camera plugins.(You can find the
 
 -[tile_map_docker](https://github.com/danielsnider/MapViz-Tile-Map-Google-Maps-Satellite)
 
-- run tile map server
-```
-sudo docker run -p 8080:8080 -d -t -v ~/mapproxy:/mapproxy danielsnider/mapproxy
-```
+
 
 
 ### Install packages those you might need.
@@ -49,6 +46,12 @@ source install/setup.bash
 ```
 
 ### Now you can launch the sensors integrated robot simulation 
+
+- run tile map server first
+
+```
+sudo docker run -p 8080:8080 -d -t -v ~/mapproxy:/mapproxy danielsnider/mapproxy
+```
 
 ```
 ros2 launch rlbd_gazebo black_donut_sim_ros2_control.launch.py
