@@ -16,6 +16,11 @@ This custom robot integrated with gps,imu,depth_camera plugins.(You can find the
 
 -[tile_map_docker](https://github.com/danielsnider/MapViz-Tile-Map-Google-Maps-Satellite)
 
+- run tile map server
+```
+sudo docker run -p 8080:8080 -d -t -v ~/mapproxy:/mapproxy danielsnider/mapproxy
+```
+
 
 ### Install packages those you might need.
 
