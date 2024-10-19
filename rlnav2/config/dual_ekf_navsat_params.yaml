@@ -15,7 +15,7 @@ ekf_filter_node_odom:
     base_link_frame: base_link
     world_frame: odom
 
-    odom0: odom
+    odom0: /odom
     odom0_config: [false, false, false,
                   false, false, false,
                   true,  true,  true,
@@ -58,8 +58,7 @@ ekf_filter_node_map:
     base_link_frame: base_footprint # the frame id used by the turtlebot's diff drive plugin
     world_frame: map
 
-    odom0: diff_controller/odom
-    
+    odom0: odom
     odom0_config: [false, false, false,
                   false, false, false,
                   true,  true,  true,

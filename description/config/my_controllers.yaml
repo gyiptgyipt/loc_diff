@@ -13,6 +13,7 @@ diff_cont:
   ros__parameters:
 
     publish_rate: 50.0
+    publish_odom_tf: false
 
     base_frame_id: base_footprint
 
