@@ -14,7 +14,8 @@ This custom robot integrated with gps,imu,depth_camera plugins.(You can find the
 
 ### For tile map for the mapviz (follow that instruction of below repo) 
 
--[tile_map_docker](https://github.com/danielsnider/MapViz-Tile-Map-Google-Maps-Satellite)
+-This is the docker image for [tile_map](https://github.com/danielsnider/MapViz-Tile-Map-Google-Maps-Satellite) 
+that I used.
 
 
 
@@ -25,11 +26,15 @@ This custom robot integrated with gps,imu,depth_camera plugins.(You can find the
 sudo apt install -y ros-humble-gazebo-ros* 
 sudo apt install -y ros-humble-ros2-control*
 sudo apt install -y ros-humble-controller-*
-sudo apt install ros-humble-navigation2
-sudo apt install ros-humble-nav2-bringup
-sudo apt install ros-humble-twist-mux ros-humble-nav2*     
-sudo apt install ros-humble-robot-localization
+sudo apt install -y ros-humble-navigation2
+sudo apt install -y ros-humble-nav2-bringup
+sudo apt install -y ros-humble-twist-mux ros-humble-nav2*     
+sudo apt install -y ros-humble-robot-localization
 sudo apt install -y ros-humble-slam-toolbox
+sudo apt install -y ros-humble-mapviz*
+sudo apt install -y ros-humble-tile-map
+sudo apt install -y ros-humble-gps-tools
+
 ```
 
 
@@ -57,9 +62,6 @@ sudo docker run -p 8080:8080 -d -t -v ~/mapproxy:/mapproxy danielsnider/mapproxy
 ros2 launch rlbd_gazebo black_donut_sim_ros2_control.launch.py
 ```
 
-```
-ros2 launch rlbd_gazebo mapviz.launch.py
-```
 
 ```
 ros2 launch rlnav2 gps_waypoint_follower.launch.py
@@ -74,6 +76,5 @@ ros2 launch rlnav2 gps_waypoint_follower.launch.py
 ..........<to_continue>........
 
 TODO : 
--need to tune robot localization (currently disabled)
 -to add gps waypoint logger and follower
 
