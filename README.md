@@ -67,13 +67,16 @@ ros2 launch rlbd_gazebo black_donut_sim_ros2_control.launch.py
 ros2 launch rlnav2 gps_waypoint_follower.launch.py
 ```
 
+- In mapviz, put the url of your tile map server. 
+- And get the gps data from topic in mapviz.
+
+
 [YOUTUBE_VIDEO](https://www.youtube.com/watch?v=lSZ8QRvmXd8&t=50s)
 
 
 
 ### Free to ask me anytime if something was wrong, I love to help you guys <3
 
-..........<to_continue>........
 
 TODO : 
 -to add gps waypoint logger and follower
